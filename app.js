@@ -30,7 +30,7 @@
       if ($scope.lunchItems.length > 0) {
         //var array = string.trim().split(",");
         items = string.trim().split(",").filter(item => item.trim() != "");
-        $scope.result = "You entered lunch " + items.length + " item(s): " + items.toString();
+        $scope.result = "You entered " + items.length + " lunch item(s): " + items.toString();
         console.log("items new array is " + items);
       } else {
         $scope.message = "";
