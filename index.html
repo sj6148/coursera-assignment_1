@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en" ng-app="Assignment">
+
+<head>
+  <script src="angular.min.js"></script>
+  <script src="app.js"></script>
+  <title>Lunch Checker</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles/bootstrap.min.css">
+  <style>
+    .message {
+      font-size: 1.3em;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+  <div ng-controller="AssignmentController" class="container">
+    <h1>Lunch Checker</h1>
+    <div class="form-group">
+      <input id="lunch-menu"
+             type="text"
+             placeholder="{{placeholder}}"
+             class="form-control"
+             ng-model="lunchItems"
+             ng-click="removeMsg()"
+             ng-keyup="verifyResult()">
+    </div>
+    <div>
+      <button class="btn btn-default" ng-click="CheckItemsCount()">Check If Too Much</button>
+    </div>
+    <div><br>
+      <!-- Your message can go here. -->
+      <p><h4>{{message}}</h4></p>
+      <p>{{result}}</p>
+    </div>
+  </div>
+
+</body>
+
+</html>
