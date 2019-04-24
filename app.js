@@ -29,7 +29,7 @@
       var items = [];
       if ($scope.lunchItems.length > 0) {
         //var array = string.trim().split(",");
-        items = string.trim().split(",").filter(item => item.trim() != "");
+        items = string.trim().split(",").filter(functon(item) {return item.trim() != ""});
         $scope.result = "You entered " + items.length + " lunch item(s): " + items.toString();
         console.log("items new array is " + items);
       } else {
